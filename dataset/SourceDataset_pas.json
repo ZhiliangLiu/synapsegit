@@ -1,0 +1,42 @@
+{
+	"name": "SourceDataset_pas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "maxtrans",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "seqno",
+				"type": "binary",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "schema_version",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "pollinterval",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "changefeed",
+			"table": "change_feed_settings"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
